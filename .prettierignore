@@ -1,0 +1,11 @@
+# next.js
+/.next/
+/out/
+
+#production
+/build
+
+/*.js
+/*.yml
+/*.json
+/*.md
