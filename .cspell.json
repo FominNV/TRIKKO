@@ -1,0 +1,19 @@
+{
+	"import": [
+		"@schoero/cspell-config"
+	],
+	"words": [
+		"schoero",
+		"primereact",
+		"primeflex",
+		"primeicons",
+		"inputtext",
+		"nextcss",
+		"splitbutton"
+	],
+	"ignorePaths": [
+		"node_modules/**",
+		".eslintrc.json",
+		"yarn.lock"
+	]
+}
