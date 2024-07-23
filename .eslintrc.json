@@ -9,7 +9,9 @@
 		"plugin:import/recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:react-hooks/recommended",
-		"plugin:prettier/recommended"
+		"plugin:prettier/recommended",
+		"next/core-web-vitals",
+		"next"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -68,6 +70,7 @@
 			{
 				"maximum": 1
 			}
-		]
+		],
+		"import/no-named-as-default": 0
 	}
 }

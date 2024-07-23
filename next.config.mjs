@@ -3,7 +3,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	async redirects() {
 		return [
-			// Basic redirect
+			// Basic redirect to monitoring
 			{
 				source: '/',
 				destination: '/monitoring',

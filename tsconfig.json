@@ -25,16 +25,24 @@
 			"@/*": [
 				"./src/*"
 			],
+			"@public/*": [
+				"./public/*"
+			],
 			"@assets/*": [
 				"./public/assets/*"
-			]
+			],
+			"@root/*": [
+				"./*"
+			],
 		}
 	},
 	"include": [
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		".next/types/**/*.ts"
+		".next/types/**/*.ts",
+		"middleware.js",
+		"i18nConfig.ts"
 	],
 	"exclude": [
 		"node_modules"

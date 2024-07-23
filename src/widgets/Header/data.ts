@@ -1,14 +1,15 @@
-import { RouterPaths } from '@/shared/enums';
 import { MenuItem } from 'primereact/menuitem';
 
-export const navLinks: MenuItem[] = [
+interface INavigationMenuItem extends MenuItem {
+	id: NavigationI18nKeys;
+}
+
+export const navLinks: INavigationMenuItem[] = [
 	{
-		label: 'Мониторинг',
-		id: RouterPaths.Monitoring,
+		id: 'monitoring',
 	},
 	{
-		label: 'Доски',
-		id: RouterPaths.Boards,
+		id: 'boards',
 	},
 ];
 

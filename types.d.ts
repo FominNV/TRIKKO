@@ -2,7 +2,15 @@ interface IWrapper {
 	children?: React.ReactNode;
 }
 
-type PageType<P = object> = NextPage<P> & {
-	getLayout?: (page: ReactElement) => ReactNode;
-	layout?: ComponentType;
-};
+interface IPageParams {
+	locale: LocaleType;
+}
+
+interface IPageProps {
+	params: IPageParams;
+}
+
+interface ILableDto<ID = string, Label = string> {
+	id: ID;
+	label: Label;
+}

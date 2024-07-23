@@ -9,7 +9,9 @@
 		"primeicons",
 		"inputtext",
 		"nextcss",
-		"splitbutton"
+		"splitbutton",
+		"trikko",
+		"tieredmenu"
 	],
 	"ignorePaths": [
 		"node_modules/**",
