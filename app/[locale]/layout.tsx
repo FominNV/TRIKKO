@@ -1,11 +1,12 @@
 import { FC } from 'react';
-import '@nextcss/reset';
-import 'primereact/resources/primereact.css';
-import 'primeflex/primeflex.css';
-import 'primeicons/primeicons.css';
-import '@public/themes/viva-light/theme.css';
 import { PrimeReactProvider } from 'primereact/api';
 import { DefaultLayout } from '@/widgets/layouts';
+
+import 'primereact/resources/themes/viva-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
+import './global.css';
 
 interface IRootLayoutProps extends IWrapper, IPageProps {}
 

@@ -5,14 +5,13 @@ import Image from 'next/image';
 import logo from '@assets/logo.png';
 import { Menubar } from 'primereact/menubar';
 import { useRouter } from 'next/navigation';
-import { SplitButton } from 'primereact/splitbutton';
-import { RouterPaths } from '@/shared/enums';
-import { containerPadding } from '@/shared/ui';
+import { containerPadding, MenuButton } from '@/shared/ui';
 import { Avatar } from 'primereact/avatar';
 import { Badge } from 'primereact/badge';
 import { TieredMenu } from 'primereact/tieredmenu';
 import { LocaleSwitcher } from '@/entities';
 import { useTranslation } from 'react-i18next';
+import { RouterPaths } from '@/shared/enums';
 
 export const Header: FC = () => {
 	const router = useRouter();
@@ -30,13 +29,10 @@ export const Header: FC = () => {
 				height={40}
 				priority
 			/>
-			<SplitButton
-				label='Задачи'
-				onClick={() => router.push(RouterPaths.Tasks)}
-				model={taskLinks}
-				size='small'
-				text
-				raised
+			<MenuButton
+				type='split'
+				button={{ label: t('tasks'), onClick: () => router.push(RouterPaths.Tasks) }}
+				menu={{ model: taskLinks }}
 			/>
 		</div>
 	);
@@ -55,6 +51,7 @@ export const Header: FC = () => {
 					popup
 					ref={menu}
 					breakpoint='767px'
+					className='text-sm'
 				/>
 			</Avatar>
 		</div>

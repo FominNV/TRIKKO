@@ -11,7 +11,9 @@
 		"nextcss",
 		"splitbutton",
 		"trikko",
-		"tieredmenu"
+		"tieredmenu",
+		"noround",
+		"togglebutton"
 	],
 	"ignorePaths": [
 		"node_modules/**",

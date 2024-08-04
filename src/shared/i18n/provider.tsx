@@ -3,7 +3,6 @@
 import { FC } from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { initTranslations } from '@root/app/i18n';
-// eslint-disable-next-line import/named
 import { createInstance, Resource } from 'i18next';
 
 interface ITranslationsProviderProps extends IWrapper {

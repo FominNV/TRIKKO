@@ -71,6 +71,7 @@
 				"maximum": 1
 			}
 		],
-		"import/no-named-as-default": 0
+		"import/no-named-as-default": 0,
+		"import/named": 0
 	}
 }
