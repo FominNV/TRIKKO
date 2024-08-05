@@ -14,3 +14,5 @@ interface ILableDto<ID = string, Label = string> {
 	id: ID;
 	label: Label;
 }
+
+type MainThemeType = 'light' | 'dark';

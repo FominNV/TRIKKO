@@ -9,7 +9,7 @@ import { containerPadding, MenuButton } from '@/shared/ui';
 import { Avatar } from 'primereact/avatar';
 import { Badge } from 'primereact/badge';
 import { TieredMenu } from 'primereact/tieredmenu';
-import { LocaleSwitcher } from '@/entities';
+import { LocaleSwitcher, ThemeSwitcher } from '@/entities';
 import { useTranslation } from 'react-i18next';
 import { RouterPaths } from '@/shared/enums';
 
@@ -40,6 +40,7 @@ export const Header: FC = () => {
 	const endMenu = (
 		<div className='flex align-items-center gap-2'>
 			<LocaleSwitcher />
+			<ThemeSwitcher />
 			<Avatar
 				size='large'
 				icon='pi pi-user'
