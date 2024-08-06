@@ -7,8 +7,3 @@ interface IResourceI18n {
 	Navigation: Record<NavigationI18nKeys, string>;
 	Test: Record<TestI18nKeys, string>;
 }
-
-interface IConfigI18n {
-	locales: LocaleType[];
-	defaultLocale: LocaleType;
-}

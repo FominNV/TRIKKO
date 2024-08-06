@@ -1,5 +1,5 @@
 'use client';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { Dropdown } from 'primereact/dropdown';
 import i18nConfig from '@root/i18nConfig';
@@ -8,7 +8,6 @@ export const LocaleSwitcher = () => {
 	const { i18n } = useTranslation();
 	const currentLocale = i18n.language;
 	const router = useRouter();
-	const currentPathname = usePathname();
 
 	const handleChange = (newLocale: LocaleType) => {
 		const days = 30;
@@ -17,11 +16,11 @@ export const LocaleSwitcher = () => {
 		const expires = date.toUTCString();
 		document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
 
-		if (currentLocale === i18nConfig.defaultLocale) {
-			router.push('/' + newLocale + currentPathname);
-		} else {
-			router.push(currentPathname.replace(`/${currentLocale}`, `/${newLocale}`));
-		}
+		// if (currentLocale === i18nConfig.defaultLocale) {
+		// 	router.push('/' + currentPathname);
+		// } else {
+		// 	router.push(currentPathname.replace(`/${currentLocale}`, `/${newLocale}`));
+		// }
 
 		router.refresh();
 	};
