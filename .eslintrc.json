@@ -1,7 +1,8 @@
 {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es2021": true,
+		"node": true
 	},
 	"extends": [
 		"eslint:recommended",
@@ -23,9 +24,10 @@
 	},
 	"plugins": [
 		"react",
-		"@typescript-eslint",
+		"prettier",
 		"promise",
-		"naming-convention"
+		"naming-convention",
+		"@typescript-eslint"
 	],
 	"rules": {
 		"indent": 0,
