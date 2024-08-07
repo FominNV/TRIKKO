@@ -1,16 +1,19 @@
 'use client';
-import { FC, useContext } from 'react';
+import { FC } from 'react';
 import { useTheme } from 'next-themes';
 import { Button } from 'primereact/button';
-import { PrimeReactContext } from 'primereact/api';
+import { getThemePath } from '@/shared/lib';
 
 export const ThemeSwitcher: FC = () => {
-	const { changeTheme = () => null } = useContext(PrimeReactContext);
 	const { setTheme, theme } = useTheme();
 
 	const toggleTheme = () => {
-		const newTheme = theme === 'light' ? 'dark' : 'light';
-		changeTheme(`viva-${theme}`, `viva-${newTheme}`, 'app-theme', () => setTheme(newTheme));
+		const themeLink = document.querySelector('#app-theme') as HTMLLinkElement | null;
+		if (themeLink) {
+			const newTheme = theme === 'light' ? 'dark' : 'light';
+			setTheme(newTheme);
+			themeLink.setAttribute('href', getThemePath(newTheme));
+		}
 	};
 
 	return (

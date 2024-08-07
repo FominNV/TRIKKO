@@ -1,12 +1,13 @@
+import 'primeicons/primeicons.css';
+import 'primeflex/primeflex.css';
+import './global.css';
+
 import { FC } from 'react';
 import { PrimeReactProvider } from 'primereact/api';
 import { DefaultLayout } from '@/widgets/layouts';
 import dynamic from 'next/dynamic';
 import { cookies } from 'next/headers';
-
-import 'primeicons/primeicons.css';
-import 'primeflex/primeflex.css';
-import './global.css';
+import { AppThemeLink } from '@/shared/ui';
 
 interface IRootLayoutProps extends IWrapper, IPageProps {}
 
@@ -20,12 +21,7 @@ const RootLayout: FC<IRootLayoutProps> = async ({ children, params }) => {
 	return (
 		<html lang={params.locale}>
 			<head>
-				{/* eslint-disable-next-line @next/next/no-css-tags */}
-				<link
-					id='app-theme'
-					rel='stylesheet'
-					href={`./themes/viva-${theme}/theme.css`}
-				/>
+				<AppThemeLink theme={theme} />
 			</head>
 			<body>
 				<PrimeReactProvider>

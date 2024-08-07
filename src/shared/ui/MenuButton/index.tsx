@@ -1,3 +1,4 @@
+'use client';
 import { Button, ButtonProps } from 'primereact/button';
 import { InputText } from 'primereact/inputtext';
 import { Menu, MenuProps } from 'primereact/menu';

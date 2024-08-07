@@ -41,12 +41,12 @@ export const SearchLine: FC<ISearchLineProps> = ({ menuItems = [], onSearch = ()
 				<ToggleIcon
 					icon='pi pi-check-circle'
 					onChange={(value) => handleCheckbox('finished', value)}
-					checked={checkboxState.finished}
+					checked={!!checkboxState.finished}
 				/>
 				<ToggleIcon
 					icon='pi pi-sliders-h'
 					onChange={(value) => handleCheckbox('filtered', value)}
-					checked={checkboxState.filtered}
+					checked={!!checkboxState.filtered}
 				/>
 				<Button
 					className={classNames('border-none shadow-none p-0 w-min', {
