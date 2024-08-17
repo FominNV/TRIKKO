@@ -19,7 +19,9 @@ const TasksView: NextPage<IPageProps> = () => {
 		},
 	];
 	return (
-		<PageContentLayout searchProps={{ menuItems: filterItems }}>
+		<PageContentLayout
+			searchProps={{ menuItems: filterItems }}
+			filter>
 			<h1>{t('tasks')}</h1>
 		</PageContentLayout>
 	);

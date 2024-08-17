@@ -12,17 +12,18 @@ type MenuButtonType = 'default' | 'split';
 interface IMenuButtonBaseProps {
 	menu?: MenuProps;
 	type?: MenuButtonType;
+	placeholder?: string;
 }
 
 interface IButtonProps extends ButtonProps, HTMLAttributes<HTMLButtonElement> {}
 
 interface IMenuButtonDefaultProps extends IMenuButtonBaseProps {
-	type: Extract<MenuButtonType, 'default'>;
+	type?: Extract<MenuButtonType, 'default'>;
 	button?: IButtonProps;
 }
 
 interface IMenuButtonSplitProps extends IMenuButtonBaseProps {
-	type: Extract<MenuButtonType, 'split'>;
+	type?: Extract<MenuButtonType, 'split'>;
 	button?: SplitButtonProps;
 }
 
@@ -30,6 +31,7 @@ type MenuButtonPropsType = IMenuButtonDefaultProps | IMenuButtonSplitProps;
 
 export const MenuButton: FC<MenuButtonPropsType> = ({
 	type = 'default',
+	placeholder = 'Filter',
 	button: { className: buttonClassName, ...buttonProps } = {},
 	menu: { className: menuClassName, model, ...menuProps } = {},
 }) => {
@@ -59,7 +61,7 @@ export const MenuButton: FC<MenuButtonPropsType> = ({
 						'pr-4': !!filterKey,
 					})}
 					variant='filled'
-					placeholder='Фильтр'
+					placeholder={placeholder}
 					value={filterKey}
 					onChange={(e) => setFilterKey(e.target.value)}
 				/>
