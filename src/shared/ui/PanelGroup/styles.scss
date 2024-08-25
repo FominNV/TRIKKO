@@ -1,0 +1,9 @@
+.panel-group {
+	&__item {
+		width: 48px;
+		height: 24px;
+	}
+	&__item:not(:first-child) {
+		margin-left: -1px;
+	}
+}

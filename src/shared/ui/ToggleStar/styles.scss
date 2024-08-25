@@ -1,0 +1,15 @@
+.toggle-star {
+	opacity: 0;
+	transition: opacity 0.25s;
+
+	&:hover {
+		opacity: 0.5;
+	}
+
+	&--checked {
+		opacity: 1;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

@@ -8,3 +8,10 @@ body {
 .p-button .p-button-icon.pi {
 	line-height: normal;
 }
+
+.p-button-label {
+	display: flex;
+	align-items: center;
+	font-weight: 400;
+	line-height: 1;
+}

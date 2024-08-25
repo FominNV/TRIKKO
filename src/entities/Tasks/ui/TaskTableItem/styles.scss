@@ -1,0 +1,38 @@
+.task-table-item {
+	&__hover-show {
+		display: none;
+	}
+
+	&:hover {
+		.task-table-item__toggle-hover {
+			opacity: 0.5;
+		}
+
+		.task-table-item__hover-hide {
+			display: none;
+		}
+		.task-table-item__hover-show {
+			display: block;
+		}
+	}
+
+	&__content {
+		transition: background-color 0.25s;
+		&:hover {
+			background-color: rgba(blue, 0.15);
+		}
+	}
+
+	&__collapse {
+		opacity: 0;
+		cursor: pointer;
+		transition:
+			rotate 0.25s,
+			opacity 0.25s;
+
+		&--rotated {
+			opacity: 1;
+			rotate: 180deg;
+		}
+	}
+}
